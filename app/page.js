@@ -29,7 +29,7 @@ const Home = () => {
   useEffect(() => {
     const fetchChatbots = async () => {
       try {
-        const response = await axios.get('https://zf70fr11-5000.inc1.devtunnels.ms/api/chatbots');
+        const response = await axios.get('https://api.coupleup.in/api/chatbots');
         setChatbots(response.data);
       } catch (error) {
         console.error('Error fetching chatbots:', error);
@@ -93,7 +93,7 @@ const Home = () => {
             return (
               <Link href={`/chat/${bot.id}-${slug}`} key={bot.id} className="flex flex-col items-center">
                 <img
-                  src={`https://zf70fr11-5000.inc1.devtunnels.ms/uploads/${bot.image}`}
+                  src={`https://api.coupleup.in/uploads/${bot.image}`}
                   alt={bot.name}
                   className="w-32 h-32 rounded-full mb-2 shadow-lg"
                   style={{
