@@ -25,7 +25,7 @@ export async function POST(req) {
         ...conversation, // Append the conversation messages
       ],
       max_tokens: 150, // Limit the number of tokens in the response
-      temperature: 2, // Set temperature for creativity in responses
+      temperature: 0.7, // Set temperature for creativity in responses
     });
 
     // Extract the assistant's reply from the API response
