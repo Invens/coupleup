@@ -7,6 +7,7 @@ import FeedbackCarousel from "@/components/feedbacks";
 import Footer from "../components/footer/page";
 import Header from "@/components/header/page";
 import TermsAndConditionModal from "@/components/termsandconditionModal/page"; // Import your modal
+import { useSession } from "next-auth/react";
 
 const generateSlug = () => {
   const randomText = Math.random().toString(36).substring(2, 7);
@@ -27,7 +28,14 @@ const Home = () => {
   const [chatbots, setChatbots] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
   const [selectedBot, setSelectedBot] = useState(null); // Store selected bot
+  const { data: session } = useSession();
 
+
+  useEffect(() => {
+    if (session) {
+      localStorage.setItem("userSession", JSON.stringify(session));
+    }
+  }, [session]);
   useEffect(() => {
     const fetchChatbots = async () => {
       try {
