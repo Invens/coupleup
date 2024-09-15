@@ -24,8 +24,8 @@ export async function POST(req) {
         { role: 'system', content: prompt }, // Initial system message with the prompt
         ...conversation, // Append the conversation messages
       ],
-      max_tokens: 1500, // Limit the number of tokens in the response
-      temperature: 0.7, // Set temperature for creativity in responses
+      max_tokens: 150, // Limit the number of tokens in the response
+      temperature: 2, // Set temperature for creativity in responses
     });
 
     // Extract the assistant's reply from the API response
