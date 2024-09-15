@@ -19,12 +19,12 @@ export async function POST(req) {
   try {
     // Call the OpenAI API's chat completion method
     const response = await openai.chat.completions.create({
-      model: 'gpt-4o', // Specify the GPT-4 model
+      model: 'gpt-3.5-turbo', // Specify the GPT-4 model
       messages: [
         { role: 'system', content: prompt }, // Initial system message with the prompt
         ...conversation, // Append the conversation messages
       ],
-      max_tokens: 150, // Limit the number of tokens in the response
+      max_tokens: 100, // Limit the number of tokens in the response
       temperature: 0.7, // Set temperature for creativity in responses
     });
 
