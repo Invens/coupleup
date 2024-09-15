@@ -9,10 +9,10 @@ const authOptions = {
     }),
   ],
   session: {
-    strategy: "jwt",
+    strategy: "jwt", // Ensures session is handled with JWT
   },
   jwt: {
-    secret: process.env.JWT_SECRET,
+    secret: process.env.NEXTAUTH_SECRET, // Use NEXTAUTH_SECRET
   },
   callbacks: {
     async jwt({ token, user }) {
@@ -22,13 +22,16 @@ const authOptions = {
       return token;
     },
     async session({ session, token }) {
-      session.user.id = token.id;
+      if (token) {
+        session.user.id = token.id;
+      }
       return session;
     },
   },
-  debug: true,
+  debug: true, // Helpful for debugging in production
 };
 
+// Handle GET and POST requests for authentication
 const handler = NextAuth(authOptions);
 
 // Export named methods for Next.js routing
