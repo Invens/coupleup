@@ -91,7 +91,7 @@ const Home = () => {
             <div className="relative w-[90vw] lg:w-[50vw] h-[50vh] overflow-hidden">
               <div className="absolute inset-0 rounded-md shadow-2xl filter blur-md bg-red-500 opacity-40 z-10"></div>
               <Image
-                src="/couple.jpg"
+                src="/mainpage.jpg"
                 height={1000}
                 width={1000}
                 alt="main image"
