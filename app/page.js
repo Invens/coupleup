@@ -74,13 +74,11 @@ const Home = () => {
         <div className="relative z-10 w-full flex flex-col lg:flex-row justify-between">
           <div className="lg:w-1/2 w-full text-center lg:text-left mt-4 lg:mt-0">
             <h1 className="text-3xl lg:text-5xl font-bold mb-6 text-white">
-              Talk to your passion, without interruptions
+            Welcome to CoupleUp – Meet, Chat & Make New Friends!
             </h1>
             <p className="text-white text-lg lg:text-xl w-[70vw] lg:w-[35vw]">
-              Passion fuels creativity, turning challenges into growth. It drives you forward, making the journey fulfilling and unlocking your true potential.
-            </p>
-
-            <Link href="/">
+            Looking to connect with new people, find your match, or make friends? CoupleUp is the perfect space for couples and singles to chat, connect, and build meaningful relationships in a fun and safe community.            </p>
+            <Link href="#active">
               <button className="px-4 py-2 text-white border-2 border-red-400 rounded-lg hover:bg-white hover:text-black mt-12">
                 Chat Now
               </button>
@@ -102,7 +100,7 @@ const Home = () => {
         </div>
       </main>
 
-      <section className="p-12">
+      <section className="p-12" id="acitve">
         <h2 className="text-xl mb-4 p-4 ">Active Users</h2>
         <div className="flex flex-wrap gap-6 justify-center" id="active">
           {chatbots.map((bot) => {
