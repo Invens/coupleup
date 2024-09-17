@@ -80,12 +80,20 @@ function Header() {
             )}
           </div>
         ) : (
-          <button
-            onClick={() => signIn('google')}
-            className="border border-gray-400 text-white py-2 px-4 rounded shadow-md hover:bg-gray-700"
-          >
-            Sign In with Google
+          <button onClick={() => signIn('google')} className="border border-gray-400 py-2 px-4 rounded shadow-md hover:bg-gray-700">
+            <div className='flex  gap-2'>
+              <p>Sign Up with</p>
+              <Image
+                src="/google.png"  // Path to the Google logo image
+                height={30}  // Adjust the height as per your design
+                width={30}   // Adjust the width as per your design
+                alt="Google Sign-In"
+                className='bg-black'
+              />
+            </div>
+
           </button>
+
         )}
       </div>
 
@@ -119,11 +127,13 @@ function Header() {
             )}
           </div>
         ) : (
-          <button
-            onClick={() => signIn('google')}
-            className="border border-gray-400 text-white py-2 px-4 rounded shadow-md hover:bg-gray-700"
-          >
-            Sign In with Google
+          <button onClick={() => signIn('google')} className="text-white">
+            <Image
+              src="/google.png" // Google logo image
+              height={30}
+              width={30}
+              alt="Google Sign-In"
+            />
           </button>
         )}
       </div>
