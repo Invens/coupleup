@@ -39,7 +39,7 @@ const Home = () => {
   useEffect(() => {
     const fetchChatbots = async () => {
       try {
-        const response = await axios.get("https://api.coupleup.in/api/chatbots");
+        const response = await axios.get("https://api.CoupleNxt.in/api/chatbots");
         setChatbots(response.data);
       } catch (error) {
         console.error("Error fetching chatbots:", error);
@@ -74,10 +74,10 @@ const Home = () => {
         <div className="relative z-10 w-full flex flex-col lg:flex-row justify-between">
           <div className="lg:w-1/2 w-full text-center lg:text-left mt-4 lg:mt-0">
             <h1 className="text-3xl lg:text-5xl font-bold mb-6 text-white">
-            Welcome to CoupleUp – Meet, Chat & Make New Friends!
+            Welcome to <span className="text-red-500">Couple</span><span className="text-blue-500">Nxt</span> – Meet, Chat & Make New Friends!
             </h1>
             <p className="text-white text-lg lg:text-xl w-[70vw] lg:w-[35vw]">
-            Looking to connect with new people, find your match, or make friends? CoupleUp is the perfect space for couples and singles to chat, connect, and build meaningful relationships in a fun and safe community.            </p>
+            Looking to connect with new people, find your match, or make friends? CoupleNxt is the perfect space for couples and singles to chat, connect, and build meaningful relationships in a fun and safe community.            </p>
             <Link href="#active">
               <button className="px-4 py-2 text-white border-2 border-red-400 rounded-lg hover:bg-white hover:text-black mt-12">
                 Chat Now
@@ -107,7 +107,7 @@ const Home = () => {
             return (
               <div key={bot.id} className="flex flex-col items-center">
                 <img
-                  src={`https://api.coupleup.in/uploads/${bot.image}`}
+                  src={`https://api.CoupleNxt.in/uploads/${bot.image}`}
                   alt={bot.name}
                   className="w-32 h-32 rounded-full mb-2 shadow-lg"
                   style={{
@@ -143,7 +143,7 @@ const Home = () => {
             <h3 className="text-2xl text-center">Selected Bot: {selectedBot.name}</h3>
             <div className="flex flex-col items-center mt-4">
               <img
-                src={`https://api.coupleup.in/uploads/${selectedBot.image}`}
+                src={`https://api.CoupleNxt.in/uploads/${selectedBot.image}`}
                 alt={selectedBot.name}
                 className="w-40 h-40 rounded-full shadow-lg"
               />
@@ -176,7 +176,7 @@ const Home = () => {
             <h2 className="text-center p-4 text-lg md:text-2xl">Reach People That You Like</h2>
             <div className="flex justify-center">
               <h1 className="text-center text-xl md:text-2xl font-semibold w-[80vw] md:w-[60vw] lg:w-[40vw]">
-                Connect with real conversations on CoupleUp, where AI meets human interaction.
+                Connect with real conversations on CoupleNxt, where AI meets human interaction.
               </h1>
             </div>
           </div>
@@ -190,7 +190,7 @@ const Home = () => {
                 Engage in Fun, Interest-Based <span className="text-red-500">Conversations</span>
               </h1>
               <p className="mt-4 text-base lg:text-lg w-full lg:w-[90%]">
-                Explore new connections by discussing your favorite topics and activities. From hobbies to personal interests, CoupleUp ensures that every conversation is meaningful and tailored to your likes.
+                Explore new connections by discussing your favorite topics and activities. From hobbies to personal interests, CoupleNxt ensures that every conversation is meaningful and tailored to your likes.
               </p>
             </div>
 
@@ -240,7 +240,7 @@ const Home = () => {
                 Experience the Best of Online Chatting
               </h1>
               <p className="mt-4 text-base lg:text-lg w-full lg:w-[90%]">
-                Discover a platform that offers a blend of engaging text conversations and AI-powered interactions. Whether you’re seeking to connect with real people or interact with human-like AI bots, CoupleUp provides the tools to enhance your chatting experience.
+                Discover a platform that offers a blend of engaging text conversations and AI-powered interactions. Whether you’re seeking to connect with real people or interact with human-like AI bots, CoupleNxt provides the tools to enhance your chatting experience.
               </p>
             </div>
 

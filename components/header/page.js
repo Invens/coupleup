@@ -37,7 +37,7 @@ function Header() {
       <div className="flex items-center">
         <Link href="/">
           <Image
-            src="/coupleup.png"
+            src="/logo.png"
             height={1000}
             width={1000}
             alt="logo"

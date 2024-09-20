@@ -32,10 +32,10 @@ const Footer = () => {
           <div className="mb-4 md:mb-0">
             <Link href="/" >
               <Image
-                src="/coupleup.png" 
+                src="/logo.png" 
                 alt="CoupleUp"
                 width={150}
-                height={40}
+                height={50}
               />
             </Link>
 

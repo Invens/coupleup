@@ -28,7 +28,7 @@ const authOptions = {
       return session;
     },
   },
-  debug: true, // Helpful for debugging in production
+  debug: false, // Helpful for debugging in production
 };
 
 // Handle GET and POST requests for authentication
