@@ -16,7 +16,7 @@ const ChatPage = ({ params }) => {
   useEffect(() => {
     const fetchChatbot = async () => {
       try {
-        const response = await axios.get(`https://api.coupleup.in/api/chatbots/${id}`); // Fetch chatbot by ID
+        const response = await axios.get(`https://api.couplenxt.com/api/chatbots/${id}`); // Fetch chatbot by ID
         setChatbot(response.data); // Set chatbot data
       } catch (err) {
         setError(true); // If error, set to true
@@ -38,7 +38,7 @@ const ChatPage = ({ params }) => {
           <>
             <div className='flex justify-center'>
               <Image
-                src={`https://api.coupleup.in/uploads/${chatbot.image}`}
+                src={`https://api.couplenxt.com/uploads/${chatbot.image}`}
                 alt='chat bot image'
                 width={100}
                 height={100}

@@ -39,7 +39,7 @@ const Home = () => {
   useEffect(() => {
     const fetchChatbots = async () => {
       try {
-        const response = await axios.get("https://api.CoupleNxt.in/api/chatbots");
+        const response = await axios.get("https://api.couplenxt.com//api/chatbots");
         setChatbots(response.data);
       } catch (error) {
         console.error("Error fetching chatbots:", error);
@@ -107,7 +107,7 @@ const Home = () => {
             return (
               <div key={bot.id} className="flex flex-col items-center">
                 <img
-                  src={`https://api.CoupleNxt.in/uploads/${bot.image}`}
+                  src={`https://api.couplenxt.com/uploads/${bot.image}`}
                   alt={bot.name}
                   className="w-32 h-32 rounded-full mb-2 shadow-lg"
                   style={{
@@ -143,7 +143,7 @@ const Home = () => {
             <h3 className="text-2xl text-center">Selected Bot: {selectedBot.name}</h3>
             <div className="flex flex-col items-center mt-4">
               <img
-                src={`https://api.CoupleNxt.in/uploads/${selectedBot.image}`}
+                src={`https://api.couplenxt.com/uploads/${selectedBot.image}`}
                 alt={selectedBot.name}
                 className="w-40 h-40 rounded-full shadow-lg"
               />
