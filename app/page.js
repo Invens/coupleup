@@ -39,7 +39,7 @@ const Home = () => {
   useEffect(() => {
     const fetchChatbots = async () => {
       try {
-        const response = await axios.get("https://api.couplenxt.com//api/chatbots");
+        const response = await axios.get("https://api.couplenxt.com/api/chatbots");
         setChatbots(response.data);
       } catch (error) {
         console.error("Error fetching chatbots:", error);
